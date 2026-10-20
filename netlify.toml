@@ -1,0 +1,4 @@
+# Recrée les pages des pièces (/p/N°/) à chaque mise à jour, pour que « Vendue » y apparaisse aussi.
+[build]
+  publish = "."
+  command = "python3 generer-fiches.py || echo 'fiches non régénérées'"

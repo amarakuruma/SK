@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SK — Mode &amp; élégance · Commander sur WhatsApp</title>
 <meta name="description" content="Pièces uniques cousues au Sénégal, livrées à Conakry. Paiement à la livraison.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SK · Mode &amp; élégance">
+<meta property="og:title" content="SK — Pièces uniques, payées à la livraison à Conakry">
+<meta property="og:description" content="Robes, ensembles et abayas en pièce unique. Livraison à Conakry, paiement à la réception.">
+<meta property="og:image" content="https://sk-mode.netlify.app/photos/hero-robe-bretelles-3-vues.jpg">
+<meta property="og:url" content="https://sk-mode.netlify.app/">
 <link rel="icon" href="logo-sk-profil.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -74,7 +80,7 @@
       <span style="color:var(--text2)">à la livraison</span>
     </div>
   </div>
-  <figure style="flex:1 1 420px;min-width:0;margin:0;display:flex;flex-direction:column;gap:14px">
+  <figure id="n1" style="flex:1 1 420px;min-width:0;margin:0;display:flex;flex-direction:column;gap:14px">
     <img src="photos/hero-robe-bretelles-3-vues.jpg" alt="Robe bustier à bretelles nouées, vue de profil et de face" style="display:block;width:100%;aspect-ratio:1122/1402;object-fit:cover;border-radius:28px;background:var(--sand3)">
     <figcaption style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
       <span style="display:flex;flex-direction:column;gap:2px"><span class="serif" style="font-weight:700;font-size:24px">N° 1 · Robe bustier à bretelles nouées</span><span style="font-size:13px;color:var(--text3)">Pièce unique · 180 000 GNF</span></span>
@@ -192,6 +198,8 @@
 
   const params = new URLSearchParams(location.search);
   const SRC = (params.get('src') || params.get('utm_source') || 'site').slice(0, 20);
+  const SITE = location.protocol.startsWith('http') ? location.origin : 'https://sk-mode.netlify.app';
+  const pieceUrl = n => SITE + '/p/' + n + '/'; // page de la pièce, avec sa photo en aperçu WhatsApp
   const wa = msg => 'https://wa.me/' + WHATSAPP.replace(/\D/g, '') + '?text=' + encodeURIComponent(msg + '\n(réf : ' + SRC + ')');
 
   const PRODUCTS = [
@@ -240,9 +248,9 @@
     const href = !p.photo
       ? wa('Bonjour SK ! Je veux un modèle sur mesure. Je vous envoie la photo juste après.\nMa taille : \nMon quartier / ville : ')
       : sold
-        ? (p.aba ? wa('Bonjour SK ! L’abaya N° ' + n + ' (' + p.name + ') est vendue. Prévenez-moi au prochain arrivage de Dubaï.') : wa('Bonjour SK ! La pièce N° ' + n + ' (' + p.name + ') est vendue. Je voudrais qu’on me la recouse à ma taille.\nMa taille : \nMon quartier / ville : '))
-        : wa('Bonjour SK ! Je veux la pièce N° ' + n + ' : ' + p.name + (p.price ? ' (' + p.price + ' GNF)' : '') + '. Elle est encore disponible ?\nMon quartier / ville : ');
-    return '<article class="card">'
+        ? (p.aba ? wa('Bonjour SK ! L’abaya N° ' + n + ' (' + p.name + ') est vendue. Prévenez-moi au prochain arrivage de Dubaï.\n\nPhoto : ' + pieceUrl(n)) : wa('Bonjour SK ! La pièce N° ' + n + ' (' + p.name + ') est vendue. Je voudrais qu’on me la recouse à ma taille.\nMa taille : \nMon quartier / ville : \n\nPhoto : ' + pieceUrl(n)))
+        : wa('Bonjour SK ! Je veux la pièce N° ' + n + ' : ' + p.name + (p.price ? ' (' + p.price + ' GNF)' : '') + '. Elle est encore disponible ?\nMon quartier / ville : \n\nPhoto : ' + pieceUrl(n));
+    return '<article class="card" id="n' + n + '" style="scroll-margin-top:16px">'
       + '<div style="position:relative;aspect-ratio:2/3;background:#EDE3D4">' + media
       + (p.photo ? '<span style="position:absolute;top:14px;left:14px;padding:6px 12px;border-radius:999px;background:#231C16;color:#F6F0E6;font-size:12px;font-weight:700">N° ' + n + '</span>' : '')
       + (sold ? '<span style="position:absolute;top:14px;right:14px;padding:6px 12px;border-radius:999px;background:#8A4526;color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase">Vendue</span>' : '')
@@ -279,7 +287,8 @@
       + '\n• Modèle : ' + modelSel.value
       + '\n• Taille : ' + size
       + '\n• Quartier / ville : ' + (areaIn.value.trim() || '…')
-      + (photoCb.checked ? '\n• J’envoie la photo du modèle juste après.' : '');
+      + (photoCb.checked ? '\n• J’envoie la photo du modèle juste après.' : '')
+      + (modelSel.selectedIndex >= 0 && modelSel.value !== 'Ton modèle, sur mesure' ? '\n\nPhoto : ' + pieceUrl(modelSel.selectedIndex + 1) : '');
     document.getElementById('wa-express').href = wa(msg);
   }
 
@@ -294,7 +303,7 @@
   document.querySelectorAll('.js-wa-general').forEach(a => { a.href = general; a.target = '_blank'; a.rel = 'noopener'; });
     document.getElementById('wa-express').target = '_blank';
   document.getElementById('wa-number').textContent = WHATSAPP;
-  const heroA = document.getElementById('wa-hero'); const heroSold = VENDUES.includes(1); heroA.textContent = heroSold ? 'Vendue · la recoudre à ma taille' : 'Je la veux'; heroA.href = heroSold ? wa('Bonjour SK ! La pièce N° 1 (Robe bustier à bretelles nouées) est vendue. Je voudrais qu’on me la recouse à ma taille.\nMa taille : \nMon quartier / ville : ') : wa('Bonjour SK ! Je veux la pièce N° 1 : Robe bustier à bretelles nouées (180 000 GNF). Elle est encore disponible ?\nMon quartier / ville : '); heroA.target = '_blank';
+  const heroA = document.getElementById('wa-hero'); const heroSold = VENDUES.includes(1); heroA.textContent = heroSold ? 'Vendue · la recoudre à ma taille' : 'Je la veux'; heroA.href = heroSold ? wa('Bonjour SK ! La pièce N° 1 (Robe bustier à bretelles nouées) est vendue. Je voudrais qu’on me la recouse à ma taille.\nMa taille : \nMon quartier / ville : \n\nPhoto : ' + pieceUrl(1)) : wa('Bonjour SK ! Je veux la pièce N° 1 : Robe bustier à bretelles nouées (180 000 GNF). Elle est encore disponible ?\nMon quartier / ville : \n\nPhoto : ' + pieceUrl(1)); heroA.target = '_blank';
 
   renderTabs(); renderProducts(); updateExpress();
 </script>
