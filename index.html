@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SK — Mode &amp; élégance · Commander sur WhatsApp</title>
+<meta name="description" content="Pièces uniques cousues au Sénégal, livrées à Conakry. Paiement à la livraison.">
+<link rel="icon" href="logo-sk-profil.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  ========= À MODIFIER =========
+  1. Le numéro WhatsApp : tout en bas, dans le script, ligne  const WHATSAPP = '224614903303';
+  2. Les textes entre [CROCHETS] : prix, frais, délais, tailles…
+  3. Les photos : remplacer les blocs <div class="ph">[Photo …]</div> par <img src="photos/xxx.jpg" alt="…">
+  4. Pixel Meta / TikTok : coller leur code juste avant </head>
+  ==============================
+-->
+<style>
+  :root{--sand:#F6F0E6;--sand2:#EDE3D4;--sand3:#E7DCCB;--line:#D6C6AE;--ink:#231C16;--text2:#5A4E42;--text3:#6B5D4E;--clay:#8A4526;--green:#1F7A4D;--white:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--sand);color:var(--ink);font-family:'Manrope',system-ui,sans-serif}
+  a{color:var(--clay)}a:hover{color:#5E2E18}
+  input,select,button{font:inherit}
+  .wrap{max-width:1240px;margin:0 auto;padding-left:24px;padding-right:24px}
+  .serif{font-family:'Cormorant',serif}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--clay)}
+  h1,h2,h3{margin:0}
+  h2{font-family:'Cormorant',serif;font-weight:600;font-size:clamp(36px,4.4vw,56px);line-height:1.02}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;border:0;cursor:pointer}
+  .btn-wa{background:var(--green);color:#fff}.btn-wa:hover{color:#fff;filter:brightness(1.08)}
+  .btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{color:#fff}
+  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink);font-weight:700}
+  .pill{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid #CDBFA9;background:#fff;color:var(--ink);font-weight:700;font-size:15px;cursor:pointer}
+  .pill[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:14px;color:var(--text3)}
+  .grid-auto{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+  .grid-fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .card{display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:hidden}
+  .field{min-height:50px;padding:0 14px;border-radius:12px;border:1.5px solid #CDBFA9;background:#fff;color:var(--ink);width:100%}
+  .label{font-weight:700;font-size:15px}
+  img.photo{width:100%;height:100%;object-fit:cover;display:block}
+</style>
+</head>
+<body>
+
+<div style="background:var(--ink);color:var(--sand);text-align:center;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.5">Pièces uniques · Livraison à Conakry · Paiement à la livraison · Envoi possible à l'intérieur du pays</div>
+
+<header class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+  <a href="#" style="display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none" aria-label="SK, mode et élégance — accueil">
+    <img src="logo-sk.svg" alt="" width="84" height="56">
+    <span style="font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--text2);line-height:1.4">Mode &amp;<br>élégance</span>
+  </a>
+  <nav style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;font-size:15px;font-weight:600">
+    <a href="#collection" style="color:var(--ink);text-decoration:none">Collection</a>
+    <a href="#livraison" style="color:var(--ink);text-decoration:none">Livraison</a>
+    <a class="btn btn-wa js-wa-general" href="#" style="min-height:44px;padding:0 18px;font-size:15px">WhatsApp</a>
+  </nav>
+</header>
+
+<section class="wrap" style="padding-top:12px;padding-bottom:64px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+  <div style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:24px">
+    <div class="eyebrow">Pièces uniques · Sénégal → Conakry</div>
+    <h1 class="serif" style="font-weight:600;font-size:clamp(46px,6.4vw,84px);line-height:.98;letter-spacing:-.01em">Le style de Lagos et Dubaï.<br><span style="font-style:italic;color:var(--clay)">Au prix de Conakry.</span></h1>
+    <p style="margin:0;font-size:19px;line-height:1.6;color:var(--text2);max-width:540px">Chaque tenue de la collection existe en une seule pièce. Choisis la tienne : on te la livre chez toi à Conakry et tu paies à la réception.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a class="btn btn-wa js-wa-general" href="#">Commander sur WhatsApp</a>
+      <a class="btn btn-ghost" href="#collection">Parcourir la collection</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px">
+      <span style="padding:6px 12px;border-radius:999px;border:1px solid #CDBFA9;font-weight:700">Espèces</span>
+      <span style="padding:6px 12px;border-radius:999px;border:1px solid #CDBFA9;font-weight:700">Orange Money</span>
+      <span style="padding:6px 12px;border-radius:999px;border:1px solid #CDBFA9;font-weight:700">MTN MoMo</span>
+      <span style="color:var(--text2)">à la livraison</span>
+    </div>
+  </div>
+  <figure style="flex:1 1 420px;min-width:0;margin:0;display:flex;flex-direction:column;gap:14px">
+    <img src="photos/hero-robe-bretelles-3-vues.jpg" alt="Robe bustier à bretelles nouées, vue de profil et de face" style="display:block;width:100%;aspect-ratio:1122/1402;object-fit:cover;border-radius:28px;background:var(--sand3)">
+    <figcaption style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+      <span style="display:flex;flex-direction:column;gap:2px"><span class="serif" style="font-weight:700;font-size:24px">N° 1 · Robe bustier à bretelles nouées</span><span style="font-size:13px;color:var(--text3)">Pièce unique · 180 000 GNF</span></span>
+      <a id="wa-hero" class="btn btn-ghost" href="#" style="min-height:44px;padding:0 18px;font-size:15px">Je la veux</a>
+    </figcaption>
+  </figure>
+</section>
+
+<div style="height:22px;background:var(--sand3);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden">
+  <svg width="100%" height="22" aria-hidden="true"><defs><pattern id="adire" width="44" height="22" patternUnits="userSpaceOnUse"><path d="M0 11 L11 0 L22 11 L11 22 Z" fill="none" stroke="#8A4526" stroke-width="1.2"/><circle cx="33" cy="11" r="2.5" fill="#8A4526"/></pattern></defs><rect width="100%" height="22" fill="url(#adire)"/></svg>
+</div>
+
+<section id="collection" class="wrap" style="padding-top:72px;padding-bottom:72px;display:flex;flex-direction:column;gap:28px">
+  <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="eyebrow">La collection</div>
+      <h2>Pièces uniques. Une seule de chaque.</h2>
+    </div>
+    <p style="margin:0;font-size:16px;line-height:1.55;color:var(--text2);max-width:380px">Chaque modèle existe en un seul exemplaire et une seule taille : la première qui confirme l'emporte. Vendue ? On peut la recoudre à ta taille en environ 2 semaines.</p>
+  </div>
+  <div id="tabs" role="group" aria-label="Filtrer la collection" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+  <div id="products" class="grid-auto"></div>
+</section>
+
+<section id="commande" style="background:var(--sand2)">
+  <div class="wrap" style="padding-top:72px;padding-bottom:72px;display:flex;flex-wrap:wrap;gap:40px">
+    <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px">
+      <div class="eyebrow">Commande express</div>
+      <h2>Ta commande prête en 30 secondes.</h2>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:var(--text2)">3 choix, un bouton. On reçoit ta commande sur WhatsApp et on te confirme le prix et la date de livraison tout de suite. Tu as vu un modèle ailleurs ? Envoie-nous la photo, on le coud pour toi.</p>
+      <div style="font-size:15px;color:var(--text2)">Rien à payer maintenant.</div>
+    </div>
+    <form onsubmit="return false" style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:18px;padding:28px;border-radius:24px;background:#fff">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <label for="sk-model" class="label">Modèle</label>
+        <select id="sk-model" class="field"></select>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div id="sk-size-label" class="label">Taille</div>
+        <div id="sizes" role="group" aria-labelledby="sk-size-label" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <label for="sk-area" class="label">Quartier ou ville</label>
+        <input id="sk-area" class="field" type="text" placeholder="Ex. Kipé, ou Kankan">
+      </div>
+      <label for="sk-photo" style="display:flex;align-items:center;gap:12px;min-height:52px;padding:0 16px;border-radius:12px;border:1.5px solid #CDBFA9;cursor:pointer;font-weight:700;font-size:15px">
+        <input id="sk-photo" type="checkbox" style="width:22px;height:22px;margin:0;accent-color:#1F7A4D">
+        J'ai une photo du modèle que je veux
+      </label>
+      <div id="photo-tip" hidden style="padding:14px 16px;border-radius:12px;background:#EAF4EE;color:#1B4D33;font-size:14px;line-height:1.5">Envoie ta commande, puis dans la discussion WhatsApp touche le trombone et ajoute ta photo. On te répond avec le prix.</div>
+      <a id="wa-express" class="btn btn-wa" href="#">Envoyer ma commande sur WhatsApp</a>
+      <div style="font-size:13px;color:var(--text3);text-align:center">Pièce disponible : paiement à la livraison à Conakry (espèces, Orange Money ou MTN MoMo).</div>
+    </form>
+  </div>
+</section>
+
+<section style="background:var(--ink);color:var(--sand)">
+  <div class="wrap" style="padding-top:72px;padding-bottom:72px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between">
+      <h2 style="max-width:620px">Elles les portent déjà.</h2>
+      <div style="font-size:16px;color:#CFC3B2">Photos partagées par nos clientes</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="photos/avis-cliente-1.jpg" alt="Cliente SK en ensemble orange et rose" loading="lazy" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;background:#3D3127"><figcaption style="font-size:14px;color:#CFC3B2">Cliente SK</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="photos/avis-demoiselles-honneur.jpg" alt="Quatre demoiselles d’honneur en tenues violettes SK" loading="lazy" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;background:#3D3127"><figcaption style="font-size:14px;color:#CFC3B2">Demoiselles d’honneur habillées par SK</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="photos/avis-cliente-2.jpg" alt="Cliente SK en robe bordeaux à motifs" loading="lazy" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;background:#3D3127"><figcaption style="font-size:14px;color:#CFC3B2">Cliente SK</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><img src="photos/avis-mme-soumah.jpg" alt="Mme Soumah en tenue bleu nuit brodée" loading="lazy" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;background:#3D3127"><figcaption style="font-size:14px;color:#CFC3B2">Mme Soumah, cliente fidèle</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:28px;border-radius:18px;background:#2F261E;min-height:260px"><blockquote class="serif" style="margin:0;font-style:italic;font-size:28px;line-height:1.2">« Habillée par SK Collection ❤️ Merci ma copine. »</blockquote><figcaption style="font-size:14px;color:#CFC3B2">Une cliente, sur ses réseaux</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="livraison" class="wrap" style="padding-top:72px;padding-bottom:72px;display:flex;flex-direction:column;gap:28px">
+  <h2>Livraison &amp; paiement, sans surprise.</h2>
+  <div class="grid-fit">
+    <div style="display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:20px;background:#fff"><div class="serif" style="font-weight:700;font-size:26px;line-height:1.05">Prête, livrée vite</div><div style="font-size:15px;line-height:1.55;color:var(--text2)">La tenue existe déjà : on te la livre chez toi à Conakry. Les frais de livraison sont à ta charge.</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:20px;background:#fff"><div class="serif" style="font-weight:700;font-size:26px;line-height:1.05">Tu paies à la réception</div><div style="font-size:15px;line-height:1.55;color:var(--text2)">Espèces, Orange Money ou MTN MoMo, quand la tenue est entre tes mains. Rien à avancer.</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:20px;background:#fff"><div class="serif" style="font-weight:700;font-size:26px;line-height:1.05">Intérieur du pays</div><div style="font-size:15px;line-height:1.55;color:var(--text2)">Paiement Orange Money ou MTN MoMo avant l'envoi par transporteur. Frais et risque du transport à ta charge.</div></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:20px;background:#fff"><div class="serif" style="font-weight:700;font-size:26px;line-height:1.05">Vendue ? Recousue pour toi</div><div style="font-size:15px;line-height:1.55;color:var(--text2)">On refait le modèle à ta taille au Sénégal en environ 2 semaines. 50 % d'acompte, le reste à la livraison.</div></div>
+  </div>
+</section>
+
+<section style="max-width:820px;margin:0 auto;padding:24px 24px 80px;display:flex;flex-direction:column;gap:8px">
+  <h2 style="margin-bottom:16px;font-size:clamp(34px,4vw,50px)">Tu te poses ces questions ?</h2>
+  <div id="faq"></div>
+</section>
+
+<section class="wrap" style="padding-bottom:88px">
+  <div style="border-radius:32px;background:#fff;padding:clamp(40px,6vw,80px) 24px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center">
+    <div class="eyebrow">Une seule pièce de chaque</div>
+    <h2 style="font-size:clamp(40px,5.6vw,72px);line-height:1;max-width:860px">Ta tenue préférée peut partir aujourd'hui.</h2>
+    <p style="margin:0;font-size:18px;color:var(--text2);max-width:560px">Écris-nous pour la réserver : la première qui confirme l'emporte. On confirme la taille avec toi sur WhatsApp.</p>
+    <a class="btn btn-wa js-wa-general" href="#" style="min-height:62px;font-size:18px">Écrire à SK sur WhatsApp</a>
+    <div style="font-size:14px;color:var(--text3)">Tu ne paies qu'à la livraison.</div>
+  </div>
+</section>
+
+<footer style="border-top:1px solid var(--line)">
+  <div class="wrap" style="padding-top:28px;padding-bottom:96px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:14px;color:var(--text3)">
+    <div style="display:flex;align-items:center;gap:12px"><img src="logo-sk.svg" alt="SK" width="48" height="32"><span>© 2026 SK · Sénégal · Côte d'Ivoire · Dubaï → Conakry</span></div>
+    <div>WhatsApp : +<span id="wa-number"></span></div>
+  </div>
+</footer>
+
+<div style="position:sticky;bottom:0;padding:12px 16px;background:rgba(246,240,230,.95);border-top:1px solid var(--line);display:flex;justify-content:center">
+  <a class="btn btn-wa js-wa-general" href="#" style="width:100%;max-width:520px;min-height:54px;font-size:16px">Commander sur WhatsApp · payé à la livraison</a>
+</div>
+
+<script>
+  // ====== PIÈCES VENDUES : mettre leurs numéros, ex. [3, 7] ======
+  const VENDUES = [];
+  // ====== NUMÉRO WHATSAPP DE LA BOUTIQUE (format international, sans le +) ======
+  const WHATSAPP = '224614903303';
+  // ==============================================================================
+
+  const params = new URLSearchParams(location.search);
+  const SRC = (params.get('src') || params.get('utm_source') || 'site').slice(0, 20);
+  const wa = msg => 'https://wa.me/' + WHATSAPP.replace(/\D/g, '') + '?text=' + encodeURIComponent(msg + '\n(réf : ' + SRC + ')');
+
+  const PRODUCTS = [
+    { name: 'Ensemble péplum rose', price: '250 000', cats: ['Ensembles'], tag: 'Ensemble', desc: 'Haut péplum à pans asymétriques et pantalon large assorti.', photo: 'photos/ensemble-peplum-rose.jpg' },
+    { name: 'Robe violet et jaune', price: '180 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Bretelles nouées, décolleté en V, jupe fluide aux couleurs vives.', photo: 'photos/robe-violet-jaune.jpg' },
+    { name: 'Robe-chemise turquoise et olive', price: '180 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Boutonnée, col officier, coupe droite et ample, manches courtes.', photo: 'photos/robe-chemise-turquoise-olive.jpg' },
+    { name: 'Robe-chemise orange', price: '180 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Boutonnée, col officier, coupe très ample. Chic sans effort.', photo: 'photos/robe-chemise-orange.jpg' },
+    { name: 'Robe bleu roi ceinture ocre', price: '200 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Manches bouffantes, ceinture corset ocre qui marque la taille.', photo: 'photos/robe-bleu-roi-ceinture.jpg' },
+    { name: 'Ensemble péplum violet', price: '250 000', cats: ['Ensembles'], tag: 'Ensemble', desc: 'Haut péplum et pantalon large dans un tissu travaillé ton sur ton.', photo: 'photos/ensemble-peplum-violet.jpg' },
+    { name: 'Robe bordeaux et blanche', price: '200 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Manches longues, col à nouer, jupe ample. Élégante en toute occasion.', photo: 'photos/robe-bordeaux-blanche.jpg' },
+    { name: 'Robe turquoise laçée', price: '200 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Col lavallière, manches bouffantes, jupe ample, laçage corset au dos.', photo: 'photos/robe-turquoise-face.jpg' },
+    { name: 'Robe jaune pâle à motifs', price: '200 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Haut à motifs vert et bordeaux, encolure goutte, jupe froncée.', photo: 'photos/robe-jaune-motif.jpg' },
+    { name: 'Ensemble violet et olive', price: '250 000', cats: ['Ensembles'], tag: 'Ensemble', desc: 'Tunique à pans et pantalon large. Coloré et confortable.', photo: 'photos/ensemble-batik-violet-olive.jpg' },
+    { name: 'Robe géométrique verte', price: '200 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Motif graphique vert et blanc, manches bouffantes, col croisé.', photo: 'photos/robe-geometrique-verte.jpg' },
+    { name: 'Robe violette ceinture dorée', price: '200 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Manches bouffantes et ceinture corset à motifs dorés.', photo: 'photos/robe-violette-ceinture-doree.jpg' },
+    { name: 'Abaya bleu nuit à volants', price: '400 000', aba: true, cats: ['Abayas'], tag: 'Abaya · Dubaï', desc: 'Volants étagés soulignés de liserés dorés, ceinture à nouer.', photo: 'photos/robe-bleu-nuit.jpg' },
+    { name: 'Ensemble blanc', price: '250 000', cats: ['Ensembles'], tag: 'Ensemble', desc: 'Chemise ample col V et pantalon large. Frais et élégant.', photo: 'photos/ensemble-lin-blanc.jpg' },
+    { name: 'Robe-kaftan bleu marine et kaki', price: '180 000', cats: ['Robes'], tag: 'Robe longue', desc: 'Boutonnée, col montant, coupe kaftan très ample, manches courtes.', photo: 'photos/robe-kaftan-marine-kaki.jpg' },
+    { name: 'Abaya bleu d’eau', price: '400 000', aba: true, cats: ['Abayas'], tag: 'Abaya · Dubaï', desc: 'Satin léger, manches ornées de perles et de dentelle, robe intérieure assortie.', photo: 'photos/abaya-bleu-d-eau.jpg' },
+    { name: 'Abaya vert sauge', price: '400 000', aba: true, cats: ['Abayas'], tag: 'Abaya · Dubaï', desc: 'Bordures perlées, robe intérieure et voile assortis.', photo: 'photos/abaya-vert-sauge.jpg' },
+    { name: 'Abaya champagne', price: '400 000', aba: true, cats: ['Abayas'], tag: 'Abaya · Dubaï', desc: 'Satin, ceinture cordelière à pompons, voile assorti.', photo: 'photos/abaya-champagne.jpg' },
+    { name: 'Ton modèle, sur mesure', cats: ['Sur mesure'], tag: 'Sur mesure', desc: 'Tu as vu un modèle ailleurs ? Envoie-nous la photo : on le coud à tes mesures, en environ 2 semaines.', photo: '' }
+  ];
+  // Pour ajouter une photo : photo: 'photos/abaya-brodee.jpg'
+  // Pour un prix : remplacer [PRIX] dans la fonction card() ci-dessous, ou ajouter price: '250 000' et l'afficher.
+
+  const FAQ = [
+    ['Je dois payer avant ?', 'Non. À Conakry, tu paies à la livraison : espèces, Orange Money ou MTN MoMo. Seules les tenues recousues sur commande demandent 50 % d’acompte.'],
+    ['Pourquoi une seule pièce par modèle ?', 'Pour que tu ne croises pas ta tenue à chaque fête. Quand une pièce est vendue, on peut la recoudre à ta taille.'],
+    ['Et si la taille ne me va pas ?', 'Chaque pièce existe dans une seule taille. Demande-la sur WhatsApp et envoie tes mesures : on vérifie avec toi avant la livraison.'],
+    ['Combien de temps pour une tenue recousue ?', 'Environ 2 semaines : elle est cousue au Sénégal à tes mesures, puis livrée à Conakry.'],
+    ['D’où viennent les abayas ?', 'De Dubaï, en pièces uniques, chacune avec son voile assorti. Vendue ? On te prévient au prochain arrivage.'],
+    ['Comment je donne mes mesures ?', 'On t’envoie un petit guide sur WhatsApp : poitrine, taille, hanches, longueur. 5 minutes, et on vérifie avec toi.'],
+    ['Vous livrez à l’intérieur du pays ?', 'Oui : paiement Orange Money ou MTN MoMo avant l’envoi par transporteur. Les frais et le risque du transport sont à ta charge.']
+  ];
+
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  let cat = 'Tout', size = 'M';
+
+  function card(p, i) {
+    const n = i + 2; // le N° 1 est la robe de l'en-tête
+    const sold = VENDUES.includes(n);
+    const media = p.photo
+      ? '<img class="photo" src="' + esc(p.photo) + '" alt="' + esc(p.name) + '">'
+      : '<div class="ph serif" style="height:100%;font-size:34px;font-style:italic;color:#8A4526">Envoie-nous ta photo</div>';
+    const href = !p.photo
+      ? wa('Bonjour SK ! Je veux un modèle sur mesure. Je vous envoie la photo juste après.\nMa taille : \nMon quartier / ville : ')
+      : sold
+        ? (p.aba ? wa('Bonjour SK ! L’abaya N° ' + n + ' (' + p.name + ') est vendue. Prévenez-moi au prochain arrivage de Dubaï.') : wa('Bonjour SK ! La pièce N° ' + n + ' (' + p.name + ') est vendue. Je voudrais qu’on me la recouse à ma taille.\nMa taille : \nMon quartier / ville : '))
+        : wa('Bonjour SK ! Je veux la pièce N° ' + n + ' : ' + p.name + (p.price ? ' (' + p.price + ' GNF)' : '') + '. Elle est encore disponible ?\nMon quartier / ville : ');
+    return '<article class="card">'
+      + '<div style="position:relative;aspect-ratio:2/3;background:#EDE3D4">' + media
+      + (p.photo ? '<span style="position:absolute;top:14px;left:14px;padding:6px 12px;border-radius:999px;background:#231C16;color:#F6F0E6;font-size:12px;font-weight:700">N° ' + n + '</span>' : '')
+      + (sold ? '<span style="position:absolute;top:14px;right:14px;padding:6px 12px;border-radius:999px;background:#8A4526;color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase">Vendue</span>' : '')
+      + '</div>'
+      + '<div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex-grow:1">'
+      + '<div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A4526;font-weight:800">' + esc(p.tag) + '</div>'
+      + '<h3 class="serif" style="font-weight:700;font-size:26px;line-height:1.05">' + esc(p.name) + '</h3>'
+      + '<div style="font-size:15px;line-height:1.5;color:#5A4E42;flex-grow:1">' + esc(p.desc) + '</div>'
+      + '<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><span style="font-weight:800;font-size:19px">' + (p.price || '[PRIX]') + ' GNF</span><span style="font-size:13px;color:#6B5D4E">' + (!p.photo ? 'Prix selon le modèle' : p.aba ? 'Pièce unique · voile inclus' : 'Pièce unique · taille sur WhatsApp') + '</span></div>'
+      + '<a class="btn btn-dark" style="min-height:50px;font-size:15px" href="' + esc(href) + '" target="_blank" rel="noopener">' + (!p.photo ? 'Envoyer ma photo' : sold ? (p.aba ? 'Être prévenue du prochain arrivage' : 'La recoudre à ma taille') : 'Je la veux') + '</a>'
+      + '</div></article>';
+  }
+
+  function renderProducts() {
+    document.getElementById('products').innerHTML = PRODUCTS.filter(p => cat === 'Tout' || p.cats.includes(cat)).map(p => card(p, PRODUCTS.indexOf(p))).join('');
+    document.querySelectorAll('#tabs .pill').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === cat));
+  }
+
+  function renderTabs() {
+    const el = document.getElementById('tabs');
+    el.innerHTML = ['Tout', 'Robes', 'Ensembles', 'Abayas', 'Sur mesure'].map(c => '<button type="button" class="pill" data-v="' + c + '">' + c + '</button>').join('');
+    el.onclick = e => { const b = e.target.closest('.pill'); if (b) { cat = b.dataset.v; renderProducts(); } };
+  }
+
+  const modelSel = document.getElementById('sk-model');
+  const areaIn = document.getElementById('sk-area');
+  const photoCb = document.getElementById('sk-photo');
+
+  function updateExpress() {
+    if (modelSel.value === 'Ton modèle, sur mesure') photoCb.checked = true;
+    document.getElementById('photo-tip').hidden = !photoCb.checked;
+    document.querySelectorAll('#sizes .pill').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === size));
+    const msg = 'Bonjour SK ! Voici ma commande :'
+      + '\n• Modèle : ' + modelSel.value
+      + '\n• Taille : ' + size
+      + '\n• Quartier / ville : ' + (areaIn.value.trim() || '…')
+      + (photoCb.checked ? '\n• J’envoie la photo du modèle juste après.' : '');
+    document.getElementById('wa-express').href = wa(msg);
+  }
+
+  modelSel.innerHTML = '<option>Robe bustier à bretelles nouées</option>' + PRODUCTS.map(p => '<option>' + esc(p.name) + '</option>').join('');
+  document.getElementById('sizes').innerHTML = ['S', 'M', 'L', 'XL', 'XXL', 'Sur mesure'].map(z => '<button type="button" class="pill" data-v="' + z + '">' + z + '</button>').join('');
+  document.getElementById('sizes').onclick = e => { const b = e.target.closest('.pill'); if (b) { size = b.dataset.v; updateExpress(); } };
+  modelSel.onchange = updateExpress; areaIn.oninput = updateExpress; photoCb.onchange = updateExpress;
+
+  document.getElementById('faq').innerHTML = FAQ.map(([q, a]) => '<div style="display:flex;flex-direction:column;gap:6px;padding:20px 0;border-bottom:1px solid #D6C6AE"><div style="font-weight:800;font-size:17px">' + esc(q) + '</div><div style="font-size:16px;line-height:1.6;color:#5A4E42">' + esc(a) + '</div></div>').join('');
+
+  const general = wa('Bonjour SK ! Je viens de votre page, je veux voir les pièces encore disponibles.');
+  document.querySelectorAll('.js-wa-general').forEach(a => { a.href = general; a.target = '_blank'; a.rel = 'noopener'; });
+    document.getElementById('wa-express').target = '_blank';
+  document.getElementById('wa-number').textContent = WHATSAPP;
+  const heroA = document.getElementById('wa-hero'); const heroSold = VENDUES.includes(1); heroA.textContent = heroSold ? 'Vendue · la recoudre à ma taille' : 'Je la veux'; heroA.href = heroSold ? wa('Bonjour SK ! La pièce N° 1 (Robe bustier à bretelles nouées) est vendue. Je voudrais qu’on me la recouse à ma taille.\nMa taille : \nMon quartier / ville : ') : wa('Bonjour SK ! Je veux la pièce N° 1 : Robe bustier à bretelles nouées (180 000 GNF). Elle est encore disponible ?\nMon quartier / ville : '); heroA.target = '_blank';
+
+  renderTabs(); renderProducts(); updateExpress();
+</script>
+</body>
+</html>

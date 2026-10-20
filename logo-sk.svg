@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-label="SK">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&amp;display=swap');</style>
+  <text x="120" y="112" text-anchor="middle" font-family="Cormorant, 'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="124" fill="#231C16">SK</text>
+  <path d="M18 128 C 78 150, 158 150, 214 118" fill="none" stroke="#8A4526" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+  <path d="M212 120 L234 104" stroke="#8A4526" stroke-width="3" stroke-linecap="round"/>
+</svg>
