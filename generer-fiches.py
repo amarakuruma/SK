@@ -75,6 +75,7 @@ TPL = '''<!doctype html>
   .ghost{{border:1.5px solid var(--ink);color:var(--ink)}}
   ul{{margin:0;padding-left:20px;color:var(--text2);line-height:1.8}}
 </style>
+<script src="/pixel.js" defer></script>
 </head>
 <body>
 <div class="wrap">
