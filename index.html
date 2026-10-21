@@ -221,6 +221,8 @@
     { name: 'Abaya bleu d’eau', price: '400 000', aba: true, cats: ['Abayas'], tag: 'Abaya · Dubaï', desc: 'Satin léger, manches ornées de perles et de dentelle, robe intérieure assortie.', photo: 'photos/abaya-bleu-d-eau.jpg' },
     { name: 'Abaya vert sauge', price: '400 000', aba: true, cats: ['Abayas'], tag: 'Abaya · Dubaï', desc: 'Bordures perlées, robe intérieure et voile assortis.', photo: 'photos/abaya-vert-sauge.jpg' },
     { name: 'Abaya champagne', price: '400 000', aba: true, cats: ['Abayas'], tag: 'Abaya · Dubaï', desc: 'Satin, ceinture cordelière à pompons, voile assorti.', photo: 'photos/abaya-champagne.jpg' },
+    { name: 'Robe à bretelles nouées orange et gris', price: '', cats: ['Robes'], tag: 'Robe longue', desc: 'Bustier gris et ocre, bretelles nouées, grande jupe froncée rouge, orange et kaki.', photo: 'photos/robe-bretelles-orange-gris.jpg' },
+    { name: 'Robe jaune et violette', price: '', cats: ['Robes'], tag: 'Robe longue', desc: 'Haut à motifs jaune et violet, encolure arrondie, manches courtes, longue jupe violette fluide.', photo: 'photos/robe-jaune-violette-manches-courtes.jpg' },
     { name: 'Ton modèle, sur mesure', cats: ['Sur mesure'], tag: 'Sur mesure', desc: 'Tu as vu un modèle ailleurs ? Envoie-nous la photo : on le coud à tes mesures, en environ 2 semaines.', photo: '' }
   ];
   // Pour ajouter une photo : photo: 'photos/abaya-brodee.jpg'
@@ -259,7 +261,7 @@
       + '<div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A4526;font-weight:800">' + esc(p.tag) + '</div>'
       + '<h3 class="serif" style="font-weight:700;font-size:26px;line-height:1.05">' + esc(p.name) + '</h3>'
       + '<div style="font-size:15px;line-height:1.5;color:#5A4E42;flex-grow:1">' + esc(p.desc) + '</div>'
-      + '<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><span style="font-weight:800;font-size:19px">' + (p.price || '[PRIX]') + ' GNF</span><span style="font-size:13px;color:#6B5D4E">' + (!p.photo ? 'Prix selon le modèle' : p.aba ? 'Pièce unique · voile inclus' : 'Pièce unique · taille sur WhatsApp') + '</span></div>'
+      + '<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><span style="font-weight:800;font-size:19px">' + (p.price ? p.price + ' GNF' : 'Prix sur WhatsApp') + '</span><span style="font-size:13px;color:#6B5D4E">' + (!p.photo ? 'Prix selon le modèle' : p.aba ? 'Pièce unique · voile inclus' : 'Pièce unique · taille sur WhatsApp') + '</span></div>'
       + '<a class="btn btn-dark" style="min-height:50px;font-size:15px" href="' + esc(href) + '" target="_blank" rel="noopener">' + (!p.photo ? 'Envoyer ma photo' : sold ? (p.aba ? 'Être prévenue du prochain arrivage' : 'La recoudre à ma taille') : 'Je la veux') + '</a>'
       + '</div></article>';
   }

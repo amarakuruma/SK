@@ -20,13 +20,14 @@ WHATSAPP = re.search(r"const WHATSAPP = '([^']*)'", src).group(1)
 VENDUES = [int(x) for x in re.findall(r'\d+', re.search(r'const VENDUES = \[([^\]]*)\]', src).group(1))]
 block = re.search(r'const PRODUCTS = \[(.*?)\n  \];', src, re.S).group(1)
 
-pieces = [dict(n=1, name='Robe bustier à bretelles nouées', price='180 000', aba=False, tag='Robe longue',
+pieces = [dict(n=1, name='Robe bustier à bretelles nouées', price='180 000', prix='180 000 GNF', aba=False, tag='Robe longue',
                desc='Haut bustier coloré, bretelles nouées sur les épaules, longue jupe fluide.',
                photo='photos/hero-robe-bretelles-3-vues.jpg')]
 for i, line in enumerate(l for l in block.split('\n') if l.strip().startswith('{')):
     p = dict(n=i + 2, name=js_str('name', line), price=js_str('price', line), aba='aba: true' in line,
              tag=js_str('tag', line), desc=js_str('desc', line), photo=js_str('photo', line))
     if p['photo']:
+        p['prix'] = p['price'] + ' GNF' if p['price'] else 'Prix sur WhatsApp'
         pieces.append(p)
 
 def wa(msg):
@@ -83,7 +84,7 @@ TPL = '''<!doctype html>
     <div class="info">
       <div class="eyebrow">{tag} · Pièce unique</div>
       <h1>{name}</h1>
-      <div class="price">{price} GNF</div>
+      <div class="price">{price}</div>
       <p>{desc}</p>
       <ul>{bullets}</ul>
       <a class="btn wa" id="cta" href="{href}" target="_blank" rel="noopener">{cta}</a>
@@ -105,7 +106,7 @@ shutil.rmtree(out, ignore_errors=True)
 for p in pieces:
     n, sold = p['n'], p['n'] in VENDUES
     url = f"{SITE}/p/{n}/"
-    title = f"N° {n} · {p['name']} — {p['price']} GNF"
+    title = f"N° {n} · {p['name']} — {p['prix']}"
     if sold:
         msg = (f"Bonjour SK ! L’abaya N° {n} ({p['name']}) est vendue. Prévenez-moi au prochain arrivage de Dubaï."
                if p['aba'] else
@@ -113,9 +114,9 @@ for p in pieces:
         cta = 'Être prévenue du prochain arrivage' if p['aba'] else 'La recoudre à ma taille'
         ogdesc = 'Vendue · ' + ('prochain arrivage sur demande.' if p['aba'] else 'on peut la recoudre à ta taille.')
     else:
-        msg = f"Bonjour SK ! Je veux la pièce N° {n} : {p['name']} ({p['price']} GNF). Elle est encore disponible ?\nMon quartier / ville : "
+        msg = f"Bonjour SK ! Je veux la pièce N° {n} : {p['name']}" + (f" ({p['prix']})" if p['price'] else '') + ". Elle est encore disponible ?\nMon quartier / ville : "
         cta = 'Je la veux sur WhatsApp'
-        ogdesc = f"Pièce unique · {p['price']} GNF · payé à la livraison à Conakry."
+        ogdesc = f"Pièce unique · {p['prix']} · payé à la livraison à Conakry."
     msg += f"\n\nPhoto : {url}\n(réf : fiche)"
     bullets = ''.join(f'<li>{b}</li>' for b in [
         'Une seule pièce : la première qui confirme l’emporte',
@@ -123,7 +124,7 @@ for p in pieces:
         'Livrée chez toi à Conakry · paiement à la livraison',
         'Espèces, Orange Money ou MTN MoMo'])
     page = TPL.format(title=E(title), ogdesc=E(ogdesc), img=E(SITE + '/' + p['photo']), name=E(p['name']),
-                      url=E(url), photo=E(p['photo']), n=n, tag=E(p['tag']), price=E(p['price']), desc=E(p['desc']),
+                      url=E(url), photo=E(p['photo']), n=n, tag=E(p['tag']), price=E(p['prix']), desc=E(p['desc']),
                       bullets=bullets, href=E(wa(msg)), cta=cta,
                       soldbadge='<span class="badge sold">Vendue</span>' if sold else '')
     os.makedirs(os.path.join(out, str(n)), exist_ok=True)
